@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafdff;
+    font-family: 'roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #1d1d1d;
+}
+
+@font-face {
+    font-family: "font-logo";
+    src: url('font/CONFN.TTF');
+}
+
+@font-face {
+    font-family: "nyala";
+    src: url('font/nyala.ttf');
+}
+
+@font-face {
+    font-family: "sunday";
+    src: url(font/sunday.otf)
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 0px 2px;
+}
+
+nav ul {
+    width: 100%;
+    height: 70px;
+    background: #176184;
+    background-size: cover;
+}
+
+nav li {
+    float: left;
+    list-style: none;
+    text-align: center;
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+/*bagian logo*/
+img.logo {
+    margin-top: 10px;
+    margin-left: 25px;
+    float: left;
+    width: 45px;
+}
+
+li.telu {
+    color: white;
+    font-family: sunday;
+    margin-top: 18px;
+    font-size: 26pt;
+    margin-left: 5px;
+}
+
+/*bagian logo*/
+
+/*hero*/
+div.hero {
+    width: 100%;
+    height: 25vw;
+    background: linear-gradient(to right, #358bb691, #358bb691), url('background/bantuan.jpg'), no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -20px;
+}
+
+h1.head {
+    color: white;
+    font-family: nyala;
+    font-size: 3.5vw;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div.cari {
+    transform: translate(0, -210%);
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1.3vw;
+    width: 35vw;
+    height: 3.7vw;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    font-size: 1.3vw;
+    width: 10vw;
+    height: 3.7vw;
+    background: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input.cari {
+    box-shadow: 0px 0px 10px rgb(66, 66, 66);
+}
+
+/*konten*/
+div.body {
+    width: 100%;
+    position: relative;
+    background: #fafdff;
+    margin-top: -7vw;
+    margin-bottom: 12vw;
+}
+
+div.konten {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+}
+
+div.seputar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+div.grid3 {
+    margin-top: 50px;
+}
+
+.garis {
+    border-right: 1px dashed black;
+}
+
+.grid3 h2 {
+    font-size: 2vw;
+    font-family: nyala;
+    color: rgb(63, 63, 63);
+    margin-left: 40px;
+    padding-bottom: 10px;
+}
+
+.grid3 button {
+    display: block;
+    padding: 10px 15px;
+    margin: 10px;
+    margin-left: 40px;
+    font-size: 1.2vw;
+    border: none;
+    text-align: left;
+    border-radius: 5px;
+    background: #edf6f7;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e0f0f1;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    height: 5vw;
+    background: #1c4f69;
+    position: absolute;
+}
+
+div.footbawah {
+    width: 95%;
+    margin: auto;
+}
+
+h5.footbawah {
+    color: #fafdff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vw;
+    line-height: 5vw;
+}
+
+/*responsif*/
+@media only screen and (max-width: 800px) {
+
+    input[type="submit"] {
+        padding: 5px;
+    }
+
+    .grid3 h2 {
+        margin-left: 30px;
+    }
+
+    .grid3 button {
+        margin-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    div.cari {
+        transform: translate(0, -180%);
+    }
+
+    .grid3 h2 {
+        margin-left: 20px;
+    }
+
+    .grid3 button {
+        margin-left: 20px;
+    }
+
+    input[type="text"] {
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    div.cari {
+        transform: translate(0, -160%);
+    }
+
+    div.seputar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    div.grid3 {
+        margin-top: 10px;
+    }
+
+    .garis2 {
+        border: none;
+    }
+
+    div.body {
+        margin-top: -8vw;
+        margin-bottom: 62vw;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    div.cari {
+        transform: translate(0, -180%);
+    }
+
+    input[type="submit"] {
+        padding: 0px;
+    }
+
+    h1.head {
+        margin-bottom: 0px;
+    }
+
+    div.body {
+        margin-top: -8vw;
+        margin-bottom: 70vw;
+    }
+}

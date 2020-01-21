@@ -1,0 +1,1237 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafdff;
+    font-family: 'roboto', sans-serif;
+}
+
+@font-face {
+    font-family: "font-logo";
+    src: url('font/CONFN.TTF');
+}
+
+@font-face {
+    font-family: "nyala";
+    src: url('font/nyala.ttf');
+}
+
+@font-face {
+    font-family: "sunday";
+    src: url(font/sunday.otf)
+}
+
+/*modal notif*/
+div.notif_bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.596);
+    position: fixed;
+    display: flex;
+    top: 0;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    display: none;
+}
+
+.notif_konten {
+    width: 40%;
+    height: 250px;
+    border-radius: 10px;
+    background: white;
+    opacity: .95;
+}
+
+div.footerpop {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px 10px 0 0;
+    background: #fafdff;
+    box-shadow: 0px 0px 5px #afabab;
+}
+
+h2.chat {
+    padding: 20px;
+}
+
+div.konten_chat {
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+.grid_chat {
+    padding: 15px;
+}
+
+.grid_chat img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.grid_chat h2 {
+    font-size: 17pt;
+    color: #252525;
+}
+
+.grid_chat p {
+    margin: 5px 0;
+    font-size: 12pt;
+    color: #252525;
+}
+
+/*Modal Login*/
+div.login_bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.596);
+    position: fixed;
+    display: flex;
+    top: 0;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    overflow: auto;
+}
+
+.login_konten {
+    width: 40%;
+    height: 450px;
+    border-radius: 10px;
+    background: white;
+    opacity: .95;
+}
+
+.tutup {
+    float: right;
+    margin-right: 10px;
+    font-size: 35pt;
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+
+.animasi {
+    animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.tutup:hover {
+    color: red;
+}
+
+img.logon {
+    width: 55%;
+    transform: translate(40%);
+    margin: 40px 0;
+}
+
+div.login-form {
+    margin: auto;
+    position: relative;
+    left: 10%;
+}
+
+div.input-box {
+    position: relative;
+}
+
+input.user,
+input.pass {
+    padding: 5px 0;
+    font-size: 15pt;
+    color: black;
+    margin-bottom: 25px;
+    border: none;
+    border-bottom: 1px solid #b9b9b9;
+    background: transparent;
+    width: 80%;
+    outline: none;
+}
+
+.login-form .input-box label {
+    top: 0;
+    left: 0;
+    position: absolute;
+    color: #302e2e;
+    font-size: 15pt;
+    padding: 5px 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.login-form .input-box input:focus~label,
+.login-form .input-box input:valid~label {
+    top: -25px;
+    color: #358ac7;
+    font-size: 12pt;
+}
+
+span.cek {
+    color: #302e2e;
+    font-family: nyala;
+    font-size: 15pt;
+}
+
+button {
+    width: 80%;
+    padding: 7px 20px;
+    font-family: nyala;
+    font-size: 15pt;
+    border: none;
+    color: white;
+    background-color: #4989d3f8;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #ffffff;
+    background-color: #2b6db8f8;
+    box-shadow: 0px 0px 10px #302e2e;
+    transition: 0.5s;
+}
+
+p.register {
+    margin-top: 20px;
+    text-align: center;
+    transform: translate(-10%);
+    color: black;
+    font-family: nyala;
+    font-size: 15pt;
+}
+
+p.register a {
+    text-decoration: none;
+    color: #4989d3f8;
+}
+
+p.register a:hover {
+    color: #2b6db8f8;
+}
+
+/*Modal Register*/
+div.register_bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.596);
+    position: fixed;
+    display: flex;
+    top: 0;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.register_konten {
+    width: 40%;
+    height: 470px;
+    border-radius: 10px;
+    background: white;
+    opacity: .95;
+}
+
+div.register-form {
+    margin: auto;
+    position: relative;
+    left: 10%;
+}
+
+div.input-box {
+    position: relative;
+}
+
+input.username,
+input.password {
+    padding: 5px 0;
+    font-size: 15pt;
+    color: #302e2e;
+    margin-bottom: 24px;
+    border: none;
+    border-bottom: 1px solid #302e2e;
+    background: transparent;
+    width: 80%;
+    outline: none;
+}
+
+.register-form .input-box label {
+    top: 0;
+    left: 0;
+    position: absolute;
+    color: #302e2e;
+    font-size: 15pt;
+    padding: 5px 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.register-form .input-box input:focus~label,
+.register-form .input-box input:valid~label {
+    top: -25px;
+    color: #4989d3cc;
+    font-size: 12pt;
+}
+
+p.login {
+    margin-top: 20px;
+    text-align: center;
+    transform: translate(-10%);
+    color: #302e2e;
+    font-family: nyala;
+    font-size: 15pt;
+}
+
+p.login a {
+    text-decoration: none;
+    color: #4989d3f8;
+}
+
+p.login a:hover {
+    color: #2b6db8f8;
+}
+
+/*back to top*/
+div.backTop {
+    width: 60px;
+    height: 60px;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 100%;
+    position: fixed;
+    background: #3589B2;
+    text-align: center;
+    z-index: 1;
+}
+
+.backTop img {
+    margin-top: 12px;
+}
+
+.backTop:hover {
+    cursor: pointer;
+    background: rgb(240, 57, 81);
+}
+
+/*navbar*/
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 0px 2px;
+}
+
+nav ul {
+    width: 100%;
+    height: 70px;
+    background-image: url('background/navbar.png');
+    background-size: cover;
+    border-bottom: 2px solid #125060;
+}
+
+nav li {
+    float: left;
+    list-style: none;
+    text-align: center;
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+/*bagian logo*/
+img.logo {
+    margin-top: 10px;
+    margin-left: 25px;
+    float: left;
+    width: 45px;
+}
+
+li.telu {
+    color: white;
+    font-family: sunday;
+    margin-top: 18px;
+    font-size: 26pt;
+    margin-left: 5px;
+}
+
+/*bagian logo*/
+
+/*pencarian*/
+li.cari {
+    margin-left: 35px;
+}
+
+input.cari {
+    border: none;
+    background: white;
+    width: 480px;
+    height: 35px;
+    float: left;
+    margin-top: 18px;
+    padding: 10px;
+    box-shadow: 0px 0px 1px whitesmoke;
+}
+
+img.cari {
+    width: 35px;
+    height: 35px;
+    margin-top: 18px;
+    float: left;
+    box-shadow: 0px 0px 1px whitesmoke;
+}
+
+/*pencarian*/
+
+/*bagian icon di navbar*/
+img.nav {
+    width: 25px;
+    margin-left: -5px;
+}
+
+p.nav {
+    color: white;
+    font-size: 15pt;
+    margin-left: -20px;
+    margin-top: 2px;
+    font-family: nyala;
+}
+
+div.dereticon {
+    width: 105px;
+    margin: 15px;
+    padding: 5px;
+    margin-left: 0px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+div.dereticon:hover {
+    border-bottom: 3px solid #356d88;
+}
+
+li.dereticon {
+    margin-left: 10px;
+    margin-right: 0px;
+    float: right;
+}
+
+div.login {
+    height: 55px;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding-left: 15px;
+    border-left: 3px solid #356d88;
+}
+
+img.login {
+    width: 45px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+li.login {
+    float: right;
+    height: 70px;
+}
+
+ul.dropdown {
+    width: 140px;
+    height: 100px;
+    position: absolute;
+    margin-top: 6px;
+    right: 0;
+    display: none;
+    background: none;
+    box-shadow: -2px 2px 5px #252525;
+}
+
+li.login:hover ul.dropdown {
+    display: block;
+}
+
+li.dropdown {
+    width: 100%;
+    height: 50px;
+    background: #125060;
+    cursor: pointer;
+}
+
+li.dropdown:hover {
+    background: #265d70;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: white;
+    font-family: nyala;
+    font-size: 17pt;
+    line-height: 50px;
+}
+
+/*bagian icon di navbar*/
+
+/*Bagian Hero*/
+.hero {
+    width: 100%;
+}
+
+.hero img {
+    margin-top: -5px;
+}
+
+/*foot hero*/
+div.foothero {
+    width: 95%;
+    height: 45px;
+    margin: auto;
+    background: #fafdff;
+    box-shadow: 0px 0px 10px rgb(121, 121, 121);
+    border-radius: 5px;
+    margin-top: -25px;
+    position: relative;
+}
+
+.tekshero {
+    float: left;
+    margin: 0 4px;
+    font-family: nyala;
+    font-size: 14pt;
+    line-height: 45px;
+}
+
+a.tekshero {
+    text-decoration: none;
+    color: #125060;
+}
+
+#geser {
+    margin-left: 20px;
+}
+
+/*brand ternama*/
+div.produkbesar {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+p.produkbesar {
+    margin-top: 30px;
+    font-size: 15pt;
+    font-family: roboto, sans-serif;
+}
+
+div.produk1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10px;
+}
+
+div.grid3 {
+    width: 90%;
+    height: 200px;
+    margin: 15px;
+    background: #ffffff;
+    box-shadow: 0px 0px 7px #757474;
+}
+
+.konten {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #356c8894;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .4s ease;
+}
+
+.grid3:hover .overlay {
+    height: 100%;
+}
+
+.teks {
+    color: white;
+    font-size: 25pt;
+    font-family: font-logo;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*produk terbaru*/
+div.newproduk {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+p.produkbesar {
+    margin-top: 40px;
+    font-size: 15pt;
+    font-family: roboto, sans-serif;
+}
+
+div.produk2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 10px;
+}
+
+div.produk2 a {
+    text-decoration: none;
+}
+
+div.kotak {
+    width: 90%;
+    height: 390px;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 5px #b1b1b1;
+}
+
+.kotak:hover {
+    box-shadow: 0px 0px 5px #5a5959;
+}
+
+h4.produk {
+    font-size: 10pt;
+    margin-top: 2px;
+    color: #252525;
+}
+
+p.harga {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #ff5722;
+}
+
+img.bintang {
+    margin-top: 5px;
+}
+
+div.namatoko {
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    border-top: 1px dashed #b1b1b1;
+}
+
+p.namatoko {
+    font-size: 15pt;
+    font-family: nyala;
+    margin: 5px;
+    color: #b1b1b1;
+}
+
+#lokasi img {
+    float: left;
+    margin: 0 5px;
+}
+
+p.lokasi {
+    font-size: 11pt;
+    font-family: arial;
+    color: #b1b1b1;
+    margin: 0 22px;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    margin: auto;
+    height: 570px;
+    background: #194358;
+}
+
+div.foot {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+}
+
+div.grid4 {
+    width: 80%;
+    height: 400px;
+}
+
+h3.foot1 {
+    color: #fafdff;
+    font-size: 18pt;
+    margin: 50px;
+}
+
+p.foot1 {
+    color: #fafdff;
+    font-size: 14pt;
+    margin: 10px;
+    padding-left: 40px;
+}
+
+p#foot1 {
+    margin-top: -30px;
+}
+
+hr.garisbawah {
+    width: 85%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+div.footbawah {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+}
+
+div.grid2 {
+    width: 80%;
+    height: 150px;
+    margin: auto;
+}
+
+.footbawah {
+    line-height: 150px;
+    text-align: center;
+}
+
+p.footbawah {
+    color: #d6d7d8;
+    font-size: 13pt;
+    text-align: left;
+}
+
+h1.footbawah {
+    color: #d6d7d8;
+    font-family: sunday;
+    font-size: 26pt;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 1255px) {
+
+    /*logo*/
+    img.logo {
+        width: 35px;
+        margin-top: 20px;
+    }
+
+    li.telu {
+        font-size: 20pt;
+        margin-top: 24px;
+    }
+
+    /*pencarian*/
+    input.cari {
+        width: auto;
+        width: 300px;
+    }
+
+    /*produk terbaru*/
+    div.produk2 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /*footer*/
+    p.footbawah {
+        font-size: 10pt;
+    }
+}
+
+@media only screen and (max-width: 1090px) {
+
+    /*pop up notif*/
+    .notif_konten {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+
+    /*modal pop up*/
+    .login_konten {
+        width: 50%;
+    }
+
+    .register_konten {
+        width: 50%;
+    }
+
+    /*footer*/
+    div.foot {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    div.grid4 {
+        height: 360px;
+    }
+
+    footer {
+        height: 880px;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+
+    /*logo*/
+    img.logo {
+        width: 0px;
+    }
+
+    li.telu {
+        font-size: 0pt;
+    }
+
+    /*pencarian*/
+    input.cari {
+        width: auto;
+        width: 280px;
+        margin-left: -20px;
+    }
+
+    div.login {
+        height: 40px;
+        margin-top: 15px;
+    }
+
+    img.login {
+        width: 35px;
+        margin-top: 5px;
+    }
+
+    /*icon di navbar*/
+    li.dereticon {
+        margin-left: 0;
+        margin-right: -5px;
+    }
+
+    /*Dropdown*/
+    ul.dropdown {
+        margin-top: 13px;
+    }
+
+    /*brand ternama*/
+    div.produk1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*produk terbaru*/
+    div.produk2 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 935px) {
+
+    /*footer*/
+    div.grid2 {
+        width: 100%;
+    }
+
+    p.footbawah {
+        font-size: 9pt;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+
+    /*pop up notif*/
+    .notif_konten {
+        width: 80%;
+    }
+
+    /*nav*/
+    nav ul {
+        height: 120px;
+        background: #125060;
+    }
+
+    input.cari {
+        width: 650px;
+    }
+
+    li.dereticon {
+        margin: auto;
+    }
+
+    /*modal pop up*/
+    .login_konten {
+        width: 60%;
+    }
+
+    .register_konten {
+        width: 60%;
+    }
+
+    /*Bagian Hero*/
+    .hero img {
+        margin-top: -5px;
+    }
+
+    /*foot hero*/
+    div.foothero {
+        height: 40px;
+    }
+
+    .tekshero {
+        line-height: 40px;
+    }
+
+    /*brand ternama*/
+    div.produk1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .konten img {
+        width: 70%;
+    }
+
+    /*produk terbaru*/
+    div.produk2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    div.kotak {
+        width: 75%;
+    }
+
+    /*footer*/
+    div.grid2 {
+        width: 110%;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    li.cari {
+        width: 90%;
+        margin: 0;
+    }
+
+    input.cari {
+        width: 90%;
+        margin-left: 0px;
+    }
+
+    /*produk terbaru*/
+    div.kotak {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    /*popup notif*/
+    div.konten_chat {
+        display: grid;
+        grid-template-columns: 15% 85%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+
+    /*popup notif*/
+    .notif_konten {
+        height: 260px;
+    }
+
+    /*modal pop up*/
+    .login_konten {
+        width: 70%;
+    }
+
+    .register_konten {
+        width: 70%;
+    }
+
+    /*foot hero*/
+    div.foothero {
+        height: 30px;
+        margin-top: -20px;
+    }
+
+    .tekshero {
+        font-size: 12pt;
+        line-height: 30px;
+    }
+
+    /*produk terbaru*/
+    div.kotak {
+        width: 90%;
+    }
+
+    /*footer*/
+    div.footbawah {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    div.grid2 {
+        margin-left: -20px;
+    }
+
+    .pake {
+        display: none;
+    }
+
+    p.footbawah {
+        color: #d6d7d8;
+        font-size: 13pt;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    /*footer*/
+    p.foot1 {
+        font-size: 10pt;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+
+    /*modal pop up*/
+    .login_konten {
+        width: 80%;
+    }
+
+    .register_konten {
+        width: 80%;
+    }
+
+    /*foot hero*/
+    div.foothero {
+        height: 25px;
+        margin-top: -17px;
+    }
+
+    .tekshero {
+        font-size: 11pt;
+        line-height: 25px;
+    }
+
+    /*brand ternama*/
+    .konten img {
+        width: 80%;
+    }
+
+    /*produk terbaru*/
+    div.produk2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    div.kotak {
+        width: 60%;
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+
+    /*notif popup*/
+    .notif_konten {
+        height: 270px;
+    }
+
+    div.konten_chat {
+        display: grid;
+        grid-template-columns: 17% 83%;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+
+    /*Navbar*/
+    nav ul {
+        height: 120px;
+    }
+
+    li.cari {
+        width: 90%;
+        margin: 0;
+    }
+
+    input.cari {
+        width: 85%;
+        margin-left: -10px;
+    }
+
+    div.dereticon {
+        width: 70px;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    div.dereticon:hover {
+        border: none;
+    }
+
+    p.nav {
+        display: none;
+    }
+
+    /*modal pop up*/
+    .login_konten {
+        width: 90%;
+    }
+
+    .register_konten {
+        width: 90%;
+    }
+
+    /*brand ternama*/
+    .konten img {
+        width: 100%;
+    }
+
+    /*footer*/
+    footer {
+        height: 760px;
+    }
+
+    div.foot {
+        margin: 0;
+    }
+
+    p.foot1 {
+        font-size: 10pt;
+        text-align: left;
+    }
+
+    div.grid2 {
+        display: none;
+    }
+
+    p.footbawah {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+
+    /*produk terbaru*/
+    div.kotak {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+
+    /*popup notif*/
+    .notif_konten {
+        height: 275px;
+    }
+
+    div.konten_chat {
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+
+    /*modal pop up*/
+    .login_konten {
+        width: 95%;
+    }
+
+    .register_konten {
+        width: 95%;
+    }
+
+    /*foot hero*/
+    div.foothero {
+        height: 20px;
+        margin-top: -15px;
+    }
+
+    .tekshero {
+        font-size: 9pt;
+        line-height: 20px;
+    }
+
+    /*footer*/
+    footer {
+        height: 1060px;
+    }
+
+    div.foot {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    div.grid4 {
+        height: 300px;
+        margin: auto;
+    }
+
+    p.foot1 {
+        font-size: 11pt;
+    }
+
+    div.atur {
+        margin-top: -100px;
+    }
+
+    div.atur2 {
+        margin-top: -50px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+
+    /*brand ternama*/
+    div.grid3 {
+        height: 150px;
+    }
+
+    .konten img {
+        width: 100%;
+        height: 150px;
+    }
+
+    /*produk terbaru*/
+    div.kotak {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+
+    .notif_konten {
+        height: 280px;
+    }
+
+    div.konten_chat {
+        grid-template-columns: 25% 75%;
+    }
+
+    .grid_chat p {
+        font-size: 10pt;
+    }
+}

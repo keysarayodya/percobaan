@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type='text/javascript' src='javascript/jquery-3.3.1.min.js'></script>
+    <script type='text/javascript' src='javascript/countdown.js'></script>
+    <link rel="shortcut icon" href="logo/favicon.ico">
+    <link rel="stylesheet" href="bantuan.css">
+    <title>Pusat Bantuan - Utopedia Help Centre</title>
+    <script>
+        $(document).ready(function () {
+            $("#button_drop").click(function () {
+                $("#panel").slideToggle("fast");
+            });
+        });
+    </script>
+
+    <script>
+        var modal = document.getElementById('popupbox');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Bagian Navigasi -->
+    <nav>
+        <ul>
+            <a href="Utopedia.html">
+                <li><img class="logo" src="logo/logo.png"></li>
+                <li class="telu">T O P E D I A</li>
+            </a>
+        </ul>
+    </nav>
+    <br>
+    <!-- Bagian Navigasi -->
+
+    <!--Bagian hero-->
+    <div class="hero">
+    </div>
+    <div class="cari">
+        <h1 class="head">Hallo, apa yang bisa kami bantu?</h1>
+        <center>
+            <input type="text" class="cari" placeholder="Cari Bantuan">
+            <input type="submit" class="cari" value="Cari">
+        </center>
+    </div>
+    <!--Bagian hero-->
+
+    <!--Bagian konten-->
+    <div class="body">
+        <div class="konten">
+            <div class="seputar">
+                <div class="grid3 garis">
+                    <h2>Seputar Pembeli</h2>
+                    <button>Utopoints</button>
+                    <button>FAQ Flash Sale seputar Pembeli</button>
+                    <button>Fitur Belanja</button>
+                    <button>Layanan Pengiriman Reguler</button>
+                    <button>Panduan Komplain di Pusat Resolusi</button>
+                    <button>Cicilan</button>
+                    <button>Fitur Peluang</button>
+                </div>
+                <div class="grid3 garis garis2">
+                    <h2>Seputar Penjual</h2>
+                    <button>Fitur Jualan</button>
+                    <button>Voucher Toko</button>
+                    <button>Layanan Pengiriman Reguler</button>
+                    <button>Cara Promosi</button>
+                    <button>Pelaporan Hak Merk</button>
+                    <button>Pengaturan Toko</button>
+                    <button>Konfirmasi Dana Hasil Penjualan</button>
+                </div>
+                <div class="grid3">
+                    <h2>Seputar Produk Digital</h2>
+                    <button>Utopedia Emas</button>
+                    <button>Voucher Game</button>
+                    <button>Tiket Kereta Api</button>
+                    <button>Tiket Pesawat</button>
+                    <button>Cara Menggunakan MyBills</button>
+                    <button>E-Voucher Utopedia</button>
+                    <button>M-Tix XXI</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Bagian konten-->
+
+    <br>
+    <br>
+    <!-- Bagian Footer -->
+    <footer>
+        <div class="footbawah">
+            <h5 class="footbawah">© 2009 - 2018, PT Utopedia</h5>
+        </div>
+    </footer>

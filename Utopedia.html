@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type='text/javascript' src='javascript/jquery-3.3.1.min.js'></script>
+    <script type='text/javascript' src='javascript/countdown.js'></script>
+    <script src="javascript/jquery.min.js"></script>
+    <link rel="shortcut icon" href="logo/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Utopedia - Online shop terpercaya seluruh indonesia</title>
+    <script>
+        var modal = document.getElementById('login');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        var modal = document.getElementById('register');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        var modal = document.getElementById('notif');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $(".loader").delay(500).fadeOut("slow");
+
+        });
+    </script>
+</head>
+
+<body>
+    <!--loading animation-->
+    <div class="loader">
+        <div class="muterin"></div>
+    </div>
+    <!--loading animation-->
+
+    <!-- Bagian Navigasi -->
+    <nav>
+        <ul>
+            <a href="Utopedia.html">
+                <li><img class="logo" src="logo/logo.png"></li>
+                <li class="telu">T O P E D I A</li>
+            </a>
+            <li class="cari"><input class="cari" type="text" placeholder="Cari produkmu disini..."><a href="#"><img
+                        class="cari" src="images/cari.png"></a></li>
+            <li class="cari"></li>
+            <li class="login">
+                <div class="login">
+                    <a href="#">
+                        <img class="login" src="images/account.png">
+                    </a>
+                </div>
+                <ul class="dropdown">
+                    <li onclick="document.getElementById('login').style.display='flex'" class="dropdown"><a href="#">Login</a></li>
+                    <br>
+                    <li onclick="document.getElementById('register').style.display='flex'" class="dropdown"><a href="#">Register</a></li>
+                </ul>
+            </li>
+            <li class="dereticon">
+                <a href="bantuan.html">
+                    <div class="dereticon">
+                        <img class="nav" src="images/bantuan.png">
+                        <p class="nav">Bantuan</p>
+                    </div>
+                </a>
+            </li>
+            <li class="dereticon">
+                <a href="#" onclick="document.getElementById('notif').style.display='flex'">
+                    <div class="dereticon">
+                        <img class="nav" src="images/notif.png">
+                        <p class="nav">Notifikasi</p>
+                    </div>
+                </a>
+            </li>
+            <li class="dereticon">
+                <a href="keranjang.html">
+                    <div class="dereticon">
+                        <img class="nav" src="images/keranjang.png">
+                        <p class="nav">Keranjang</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Bagian Navigasi -->
+    <br>
+    <!-- Bagian kategori -->
+    <div class="category">
+        <a class="active" href="Utopedia.html">Flash deal!</a>
+        <a href="kategori_elektronik.html">Electronic</a>
+        <a href="kategori_fashion.html">Fashion</a>
+        <a href="#">Media & book</a>
+        <a href="#">Sport</a>
+    </div>
+    <!-- Bagian kategori -->
+
+    <!-- Bagian Modal Notif -->
+    <div class="notif_bg" id="notif">
+        <div class="notif_konten animasi">
+            <div class="footerpop">
+                <div onclick="document.getElementById('notif').style.display='none'" class="tutup">+</div>
+                <h2 class="chat">Chat terbaru</h2>
+                <div class="konten_chat">
+                    <div class="grid_chat">
+                        <center>
+                            <img src="images/toko.jpg">
+                        </center>
+                    </div>
+                    <div class="grid_chat">
+                        <h2>Pusat Gadget</h2>
+                        <p>Masih ready gan, barang mulus. Silahkan dipesan :)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="konten_chat">
+                    <div class="grid_chat">
+                        <center>
+                            <img src="images/orang.jpg">
+                        </center>
+                    </div>
+                    <div class="grid_chat">
+                        <h2>Cempaka Cell</h2>
+                        <p>Masih banyak gan stoknya, Kondisi baru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bagian Modal Notif -->
+
+    <!-- Bagian Modal Login -->
+    <div class="login_bg" id="login">
+        <div class="login_konten animasi">
+            <div onclick="document.getElementById('login').style.display='none'" class="tutup">+</div>
+            <img class="logon" src="logo/logo full.png">
+            <form method="post" action="Utopedia.html">
+                <div class="login-form">
+                    <div class="input-box">
+                        <input class="user" type="text" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <input class="pass" type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <input type="checkbox" checked>
+                    <span class="cek">Remember me</span> <br>
+                    <button type="submit">LOGIN</button>
+                    <p class="register">Don't have an account? <a onclick="document.getElementById('login').style.display='none';document.getElementById('register').style.display='flex' "
+                            href="#">Register now</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Bagian Modal Login -->
+
+    <!-- Bagian Modal Register -->
+    <div class="register_bg" id="register">
+        <div class="register_konten animasi">
+            <div onclick="document.getElementById('register').style.display='none'" class="tutup">+</div>
+            <img class="logon" src="logo/logo full.png">
+            <form method="post" action="Utopedia.html">
+                <div class="register-form">
+                    <div class="input-box">
+                        <input class="username" type="text" required>
+                        <label>Username or Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input class="password" type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="input-box">
+                        <input class="password" type="password" required>
+                        <label>Repeat Password</label>
+                    </div>
+                    <button type="submit">REGISTER</button>
+                    <p class="login">Already have an account? <a onclick="document.getElementById('register').style.display='none';document.getElementById('login').style.display='flex'"
+                            href="#">Login here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Bagian Modal Register -->
+
+    <!-- Bagian Back To Top -->
+    <div class="backTop">
+        <img src="images/dropup.png" width="30px">
+    </div>
+    <!-- Bagian Back To Top -->
+
+    <!-- Bagian promo -->
+    <div class="body">
+        <div class="content">
+            <div class="flashdeal">
+                <a href="#">
+                    <img class="promo" src="images/promo.png">
+                </a>
+                <div class="diskon">
+                    <a href="#">
+                        <img class="diskon" src="images/diskon1.png">
+                    </a>
+                    <a href="#">
+                        <img class="diskon" src="images/diskon2.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Bagian promo -->
+
+        <!-- Bagian flashsale -->
+        <div class="flashsale">
+            <div id='tampilkan'></div>
+            <div class="flash">
+                <a href="detail_produk.html">
+                    <div class="kotak">
+                        <img src="produk/asus.jpg" width="180px" height="180px">
+                        <h4 class="produk">ASUS ROG GL503GE - i7 8750H - 8GB - 1TB - GTX1050Ti</h4>
+                        <strike>
+                            <p class="potongan">Rp 16.750.000</p>
+                        </strike>
+                        <p class="harga">Rp 16.475.000</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="kotak">
+                        <img src="produk/blender.jpg" width="180px" height="180px">
+                        <h4 class="produk">Sekai Blender/Pelumat (2 in 1) BL 751 GL - Hijau Muda</h4>
+                        <strike>
+                            <p class="potongan">Rp 165.000</p>
+                        </strike>
+                        <p class="harga">Rp 149.900</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="kotak">
+                        <img src="produk/wifi.jpg" width="180px" height="180px">
+                        <h4 class="produk">FLASH SALE Wifi Extender USB 150Mbps - TOTOLINK</h4>
+                        <strike>
+                            <p class="potongan">Rp 99.800</p>
+                        </strike>
+                        <p class="harga">Rp 75.000</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="kotak">
+                        <img src="produk/pb.jpg" width="180px" height="180px">
+                        <h4 class="produk">MosaicBox S5 Powerbank 5000 mAh smart charging</h4>
+                        <strike>
+                            <p class="potongan">Rp 110.000</p>
+                        </strike>
+                        <p class="harga">Rp 89.900</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="kotak">
+                        <img src="produk/hedset.jpg" width="180px" height="180px">
+                        <h4 class="produk">Headset Gaming Aula Prime LB-01 Blue</h4>
+                        <strike>
+                            <p class="potongan">Rp 150.000</p>
+                        </strike>
+                        <p class="harga">Rp 109.900</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Bagian flashsale -->
+
+        <!-- Bagian hot product -->
+        <div class="hotproduct">
+            <p class="produk">Hot Products</p>
+            <div class="hot">
+                <div class="kotak2">
+                    <a href="hot_produk.html">
+                        <img src="produk/Hot Product 3.png" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="kotak2">
+                    <a href="#">
+                        <img src="produk/Hot Product 2.png" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="kotak2">
+                    <a href="#">
+                        <img src="produk/Hot Product 1.png" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="kotak2">
+                    <a href="#">
+                        <img src="produk/Hot Product 1.png" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="kotak2">
+                    <a href="#">
+                        <img src="produk/Hot Product 3.png" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="kotak2">
+                    <a href="#">
+                        <img src="produk/Hot Product 2.png" width="100%" height="100%">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- Bagian hot product -->
+    </div>
+
+    <!-- Bagian Footer -->
+    <footer>
+        <div class="foot">
+            <div class="grid4">
+                <h3 class="foot1">Utopedia</h3>
+                <p id="foot1" class="foot1">Tentang Kami</p>
+                <p class="foot1">Karir</p>
+                <p class="foot1">Blog</p>
+                <p class="foot1">Media Kit</p>
+                <p class="foot1">Kisah Penjual</p>
+                <p class="foot1">Mitra Troppers</p>
+                <p class="foot1">Official Store</p>
+                <p class="foot1">Kegiatan kami</p>
+            </div>
+            <div class="grid4">
+                <h3 class="foot1">Beli</h3>
+                <p id="foot1" class="foot1">Cara Belanja</p>
+                <p class="foot1">Pembayaran</p>
+                <p class="foot1">Pengembalian Dana</p>
+                <p class="foot1">Hot List</p>
+                <p class="foot1">Hot Product</p>
+            </div>
+            <div class="grid4 atur">
+                <h3 class="foot1">Jual</h3>
+                <p id="foot1" class="foot1">Cara Berjualan Online</p>
+                <p class="foot1">Gold Merchant</p>
+                <p class="foot1">Premium Seller</p>
+                <p class="foot1">beriklan TopAds</p>
+                <p class="foot1">Penarikan Dana</p>
+                <p class="foot1">Seller Center</p>
+                <p class="foot1">Daftar Official Store</p>
+            </div>
+            <div class="grid4 atur2">
+                <h3 class="foot1">Bantuan</h3>
+                <p id="foot1" class="foot1">Syarat dan Ketentuan</p>
+                <p class="foot1">Kebijakan Privasi</p>
+                <p class="foot1">Pusat Resolusi</p>
+                <p class="foot1">Hubungi Kami</p>
+                <p class="foot1">Panduan Keamanan</p>
+                <p class="foot1">Keluhan dan Saran</p>
+            </div>
+        </div>
+        <hr class="garisbawah">
+        <div class="footbawah">
+            <div class="grid2 pake">
+                <h1 class="footbawah">U-Topedia</h1>
+            </div>
+            <div class="grid2">
+                <p class="footbawah">Copyright © 2018 True E-Commerce, All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bagian Footer -->
+
+    <!-- JS Back to top -->
+    <script type="text/javascript">
+        var $backToTop = $(".backTop");
+        $backToTop.hide();
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() > 100) {
+                $backToTop.fadeIn();
+            } else {
+                $backToTop.fadeOut();
+            }
+        });
+
+        $backToTop.on('click', function (e) {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 500);
+        });
+    </script>
+    <!-- JS Back to top -->
+</body>
+
+</html>

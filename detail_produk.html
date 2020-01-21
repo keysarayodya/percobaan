@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type='text/javascript' src='javascript/jquery-3.3.1.min.js'></script>
+    <script type='text/javascript' src='javascript/tab.js'></script>
+    <script type='text/javascript' src='javascript/popup_gambar.js'></script>
+    <link rel="shortcut icon" href="logo/favicon.ico">
+    <link rel="stylesheet" href="detail_produk.css">
+    <title>Jual ASUS ROG GL503GE - i7 - Utopedia</title>
+    <script>
+        var modal = document.getElementById('login');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        var modal = document.getElementById('register');
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+        }
+        var modal = document.getElementById('notif');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Bagian Navigasi -->
+    <nav>
+        <ul>
+            <a href="Utopedia.html">
+                <li><img class="logo" src="logo/logo.png"></li>
+                <li class="telu">T O P E D I A</li>
+            </a>
+            <li class="cari"><input class="cari" type="text" placeholder="Cari produkmu disini..."><a href="#"><img
+                        class="cari" src="images/cari.png"></a></li>
+            <li class="cari"></li>
+            <li class="login">
+                <div class="login">
+                    <a href="#">
+                        <img class="login" src="images/account.png">
+                    </a>
+                </div>
+                <ul class="dropdown">
+                    <li onclick="document.getElementById('login').style.display='flex'" class="dropdown"><a href="#">Login</a></li>
+                    <br>
+                    <li onclick="document.getElementById('register').style.display='flex'" class="dropdown"><a href="#">Register</a></li>
+                </ul>
+            </li>
+            <li class="dereticon">
+                <a href="bantuan.html">
+                    <div class="dereticon">
+                        <img class="nav" src="images/bantuan.png">
+                        <p class="nav">Bantuan</p>
+                    </div>
+                </a>
+            </li>
+            <li class="dereticon">
+                <a href="#" onclick="document.getElementById('notif').style.display='flex'">
+                    <div class="dereticon">
+                        <img class="nav" src="images/notif.png">
+                        <p class="nav">Notifikasi</p>
+                    </div>
+                </a>
+            </li>
+            <li class="dereticon">
+                <a href="keranjang.html">
+                    <div class="dereticon">
+                        <img class="nav" src="images/keranjang.png">
+                        <p class="nav">Keranjang</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Bagian Navigasi -->
+
+    <!-- Bagian Modal Notif -->
+    <div class="notif_bg" id="notif">
+        <div class="notif_konten animasi">
+            <div class="footerpop">
+                <div onclick="document.getElementById('notif').style.display='none'" class="tutup">+</div>
+                <h2 class="chat">Chat terbaru</h2>
+                <div class="konten_chat">
+                    <div class="grid_chat">
+                        <center>
+                            <img src="images/toko.jpg">
+                        </center>
+                    </div>
+                    <div class="grid_chat">
+                        <h2>Pusat Gadget</h2>
+                        <p>Masih ready gan, barang mulus. Silahkan dipesan :)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="konten_chat">
+                    <div class="grid_chat">
+                        <center>
+                            <img src="images/orang.jpg">
+                        </center>
+                    </div>
+                    <div class="grid_chat">
+                        <h2>Cempaka Cell</h2>
+                        <p>Masih banyak gan stoknya, Kondisi baru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bagian Modal Notif -->
+
+    <!--pop up keranjang-->
+    <div class="popup" id="keranjang_popup">
+        <div class="popup_konten">
+            <div class="ceklis">&#10004;</div>
+            <p class="kata">Produk berhasil dimasukkan ke keranjang belanja</p>
+            <a href="keranjang.html">
+                <button class="pencet">Lihat Keranjang</button>
+            </a>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".klik").click(function(){
+                $(".popup").fadeIn(500);
+            setTimeout(function(){
+                $(".popup").fadeOut('slow');}, 3000);
+            });
+        });
+    </script>
+    <!--pop up keranjang-->
+
+    <!-- Bagian Modal Login -->
+    <div class="login_bg" id="login">
+        <div class="login_konten animasi">
+            <div onclick="document.getElementById('login').style.display='none'" class="tutup">+</div>
+            <img class="logon" src="logo/logo full.png">
+            <form method="post" action="Utopedia.html">
+                <div class="login-form">
+                    <div class="input-box">
+                        <input class="user" type="text" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <input class="pass" type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <input type="checkbox" checked>
+                    <span class="cek">Remember me</span> <br>
+                    <button class="button" type="submit">LOGIN</button>
+                    <p class="register">Don't have an account? <a onclick="document.getElementById('login').style.display='none';document.getElementById('register').style.display='flex' "
+                            href="#">Register now</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Bagian Modal Login -->
+
+    <!-- Bagian Modal Register -->
+    <div class="register_bg" id="register">
+        <div class="register_konten animasi">
+            <div onclick="document.getElementById('register').style.display='none'" class="tutup">+</div>
+            <img class="logon" src="logo/logo full.png">
+            <form method="post" action="Utopedia.html">
+                <div class="register-form">
+                    <div class="input-box">
+                        <input class="username" type="text" required>
+                        <label>Username or Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input class="password" type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="input-box">
+                        <input class="password" type="password" required>
+                        <label>Repeat Password</label>
+                    </div>
+                    <button class="button" type="submit">REGISTER</button>
+                    <p class="login">Already have an account? <a onclick="document.getElementById('register').style.display='none';document.getElementById('login').style.display='flex'"
+                            href="#">Login here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Bagian Modal Register -->
+
+    <!-- Bagian Back To Top -->
+    <div class="backTop">
+        <img src="images/dropup.png" width="30px">
+    </div>
+    <!-- Bagian Back To Top -->
+
+    <!--pop up Gambar produk-->
+    <div class="gambar_bg1">
+        <img class="gambar_popup" src="produk/produk1.jpg">
+    </div>
+    <div class="gambar_bg2">
+        <img class="gambar_popup" src="produk/produk2.jpg">
+    </div>
+    <div class="gambar_bg3">
+        <img class="gambar_popup" src="produk/produk3.jpg">
+    </div>
+    <div class="gambar_bg4">
+        <img class="gambar_popup" src="produk/produk4.jpg">
+    </div>
+    <div class="gambar_bg5">
+        <img class="gambar_popup" src="produk/produk5.jpg">
+    </div>
+    <!--pop up Gambar produk-->
+
+
+    <!-- Produk -->
+    <div class="body">
+        <div class="content">
+            <div class="produk">
+                <img class="gambar1" id="gambar_utama" src="produk/produk1.jpg" alt="">
+                <img class="gambar2" id="gambar_produk" src="produk/produk2.jpg" alt="">
+                <img class="gambar3" id="gambar_produk" src="produk/produk3.jpg" alt="">
+                <img class="gambar4" id="gambar_produk" src="produk/produk4.jpg" alt="">
+                <img class="gambar5" id="gambar_produk" src="produk/produk5.jpg" alt="">
+            </div>
+
+            <div class="deskripsi">
+                <h1 class="nama_produk"> ASUS ROG GL503GE - i7 </h1>
+                <div class="bintang">
+                    <img id="bintang" src="images/bintang_1.png" alt="bitang">
+                    <img id="bintang" src="images/bintang_1.png" alt="bitang">
+                    <img id="bintang" src="images/bintang_1.png" alt="bitang">
+                    <img id="bintang" src="images/bintang_1.png" alt="bitang">
+                    <img id="bintang" src="images/setengah.png" alt="bitang">
+
+                    <p id="percen">98% pesanan berhasil dari 69 pesanan.</p>
+                    <p>100% Transaksi Sukses Dari 3 Transaksi</p>
+                    <p id="discon">37%</p>
+                    <p id="harga"> Rp. 16.750.000 </p>
+                    <p id="harga_discon">Rp. 16.475.000</p>
+
+                    <div class="tombol">
+                        <a href="checkout.html">
+                            <input id="beli" type="submit" value="Beli Sekarang">
+                        </a>
+                        <input id="beli" class="klik" type="button" value="Tambahkan ke Keranjang">
+                    </div>
+
+                    <div class="infor_produk">
+                        <div class="icon_ket">
+                            <img id="icon_ket" src="images/mata.png">
+                            <p id="tulis">Dilihat </p>
+                            <p id="tulis">140 kali</p>
+                        </div>
+
+                        <div class="icon_ket">
+                            <img id="icon_ket" src="images/mobil.png">
+                            <p id="tulis">Terkirim </p>
+                            <p id="tulis">140 kali</p>
+                        </div>
+
+                        <div class="icon_ket">
+                            <img id="icon_ket" src="images/pricetag.png">
+                            <p id="tulis">Barang : </p>
+                            <p id="tulis">Baru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside">
+                <center>
+                    <img id="toko" src="images/toko.jpg">
+                    <h3>Pusat Gadget</h3>
+                    <div class="star_toko">
+                        <img id="star_toko" src="images/bintangful.png">
+                        <img id="star_toko" src="images/bintangful.png">
+                        <img id="star_toko" src="images/bintangful.png">
+                        <img id="star_toko" src="images/bintangful.png">
+                        <img id="star_toko" src="images/bintangset.png">
+                    </div>
+
+                    <div class="lokasi">
+                        <img id="lokasi" src="images/peta.png">
+                        <h3> Jakarta<h3>
+                    </div>
+                    <div class="aktif">
+                        <img id="aktif" src="">
+                        <p>Aktif 1 jam yang lalu</p>
+                    </div>
+                </center>
+
+                <div id="informasi_toko">
+                    <p>Transaksi sukses :<br> 50% dari 345 produk</p>
+                    <p>Diskusi Dibalas :<br> 30% (+- 40 menit)</p>
+                    <p>Pesan dibalas :<br> 50% (+- 25 menit)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="comment">
+            <div class="tentang_produk">
+                <div class="icon">
+                    <div id="tulisan_infor">
+                        <img id="gambar_task" src="images/task.png">
+                        Informasi Produk
+                    </div>
+                    <div id="tulisan_diskusi">
+                        <img id="gambar_task" src="images/diskusi.png">
+                        Diskusi
+                    </div>
+                    <div id="tulisan_review">
+                        <img id="gambar_task" src="images/review.png">
+                        Ulasan
+                    </div>
+                </div>
+            </div>
+
+            <div class="informasi_produk">
+                <h4>ASUS ROG GL503GE - i7</h4>
+                <br>
+                <p>Spesifikasi :</p>
+                <p>- Processor Intel Coffee Lake Core i7-8750H speed 2.20 GHz up to 4.10 GHz</p>
+                <p>- Ram 8GB DDR4-2666</p>
+                <p>- 128GB SSD + 1TB HDD</p>
+                <p>- Intel" UHD Graphics 630</p>
+                <p>- Nvidia GeForce GTX 1060 (6GB GDDR5 vRAM)</p>
+                <p>- Screen 15.6 inch, 1920 x 1080 px resolution, IPS, 144 HZ, GSync, matte</p>
+                <p>- Operating system Windows 10</p>
+                <br>
+                <p>Fitur :</p>
+                <p>- Intel HM370 Express Chipsets</p>
+                <p>- Wireless Data Network 802.11AC, Bluetooth 5.0</p>
+                <p>- Non DVD</p>
+                <p>- 2x speakers with smart amplifier technology</p>
+                <p>- 4 RGB Backlight Keyboard</p>
+                <p>- HD Web Camera</p>
+                <br>
+            </div>
+
+            <div class="diskusi">
+                <div class="tanya">
+                    <img id="gambar_task" src="images/diskusi.png">
+                    <p>
+                        Ada pertanyaan ? Diskusikan dengan penjual atau pengguna lain
+                        <input id="pertanyaan" type="submit" value="Hayuu Diskusikan">
+                    </p>
+                </div>
+
+                <div class="orang">
+                    <div class="nanya">
+                        <div id="orang">
+                            <img src="images/orang.jpg">
+                            <h6>Kili kiliu</h6>
+                        </div>
+                        <p>barang masih ready gan?</p>
+                    </div>
+
+                    <div class="jawab">
+                        <div id="orang">
+                            <img src="images/toko.jpg">
+                            <h6>Pusat Gadget</h6>
+                        </div>
+                        <p>Ready gan,stok masih banyak :)</p>
+                    </div>
+                </div>
+
+                <div class="orang">
+                    <div class="nanya">
+                        <div id="orang">
+                            <img src="images/orang1.jpg">
+                            <h6>Luma Limi</h6>
+                        </div>
+                        <p>barang masih ready gan?</p>
+                    </div>
+
+                    <div class="jawab">
+                        <div id="orang">
+                            <img src="images/toko.jpg">
+                            <h6>Pusat Gadget</h6>
+                        </div>
+                        <p>Semua Ready gan</p>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="review">
+            <div class="bintang1">
+                <img id="bintang1" src="images/bintang_1.png" alt="bitang">
+                <img id="bintang1" src="images/bintang_1.png" alt="bitang">
+                <img id="bintang1" src="images/bintang_1.png" alt="bitang">
+                <img id="bintang1" src="images/bintang_1.png" alt="bitang">
+                <img id="bintang1" src="images/setengah.png" alt="bitang">
+            </div>
+            <h6>oleh Aceng</h6>
+            <p>Barang original, harga terbaik, respon cepat dan pelayanan ramah <img src="images/hore.gif" height="50px"></p>
+            <br>
+        </div>
+        <div class="review">
+            <div class="bintang1">
+                <img id="bintang1" src="images/bintang_1.png" alt="bitang">
+                <img id="bintang1" src="images/bintang_1.png" alt="bitang">
+                <img id="bintang1" src="images/bintang_1.png" alt="bitang">
+                <img id="bintang1" src="images/bintang_1.png" alt="bitang">
+                <img id="bintang1" src="images/setengah.png" alt="bitang">
+            </div>
+            <h6>oleh fikri</h6>
+            <p>Barang memuaskan, packing rapih, dan pengiriman cepat! <img src="images/gerak.gif" height="50px"></p>
+            <br>
+        </div>
+        <div class="review">
+            <div class="bintang1">
+                <img id="bintang1" src="images/bintang_1.png" alt="bitang">
+                <img id="bintang1" src="images/bintang_1.png" alt="bitang">
+                <img id="bintang1" src="images/bintang_1.png" alt="bitang">
+                <img id="bintang1" src="images/bintang_1.png" alt="bitang">
+                <img id="bintang1" src="images/setengah.png" alt="bitang">
+            </div>
+            <h6>oleh azmi</h6>
+            <p>Mantap SOUL! packing rapih, respon cepat namun sayang pengiriman agak lambat hehehe <img src="images/ketawa.gif"
+                    height="50px"></p>
+            <br>
+        </div>
+    </div>
+    <br>
+    <!-- Produk -->
+
+    <!-- Bagian Footer -->
+    <footer>
+        <div class="foot">
+            <div class="grid4">
+                <h3 class="foot1">Utopedia</h3>
+                <p id="foot1" class="foot1">Tentang Kami</p>
+                <p class="foot1">Karir</p>
+                <p class="foot1">Blog</p>
+                <p class="foot1">Media Kit</p>
+                <p class="foot1">Kisah Penjual</p>
+                <p class="foot1">Mitra Troppers</p>
+                <p class="foot1">Official Store</p>
+                <p class="foot1">Kegiatan kami</p>
+            </div>
+            <div class="grid4">
+                <h3 class="foot1">Beli</h3>
+                <p id="foot1" class="foot1">Cara Belanja</p>
+                <p class="foot1">Pembayaran</p>
+                <p class="foot1">Pengembalian Dana</p>
+                <p class="foot1">Hot List</p>
+                <p class="foot1">Hot Product</p>
+            </div>
+            <div class="grid4 atur">
+                <h3 class="foot1">Jual</h3>
+                <p id="foot1" class="foot1">Cara Berjualan Online</p>
+                <p class="foot1">Gold Merchant</p>
+                <p class="foot1">Premium Seller</p>
+                <p class="foot1">beriklan TopAds</p>
+                <p class="foot1">Penarikan Dana</p>
+                <p class="foot1">Seller Center</p>
+                <p class="foot1">Daftar Official Store</p>
+            </div>
+            <div class="grid4 atur2">
+                <h3 class="foot1">Bantuan</h3>
+                <p id="foot1" class="foot1">Syarat dan Ketentuan</p>
+                <p class="foot1">Kebijakan Privasi</p>
+                <p class="foot1">Pusat Resolusi</p>
+                <p class="foot1">Hubungi Kami</p>
+                <p class="foot1">Panduan Keamanan</p>
+                <p class="foot1">Keluhan dan Saran</p>
+            </div>
+        </div>
+        <hr class="garisbawah">
+        <div class="footbawah">
+            <div class="grid2 pake">
+                <h1 class="footbawah">U-Topedia</h1>
+            </div>
+            <div class="grid2">
+                <p class="footbawah">Copyright © 2018 True E-Commerce, All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bagian Footer -->
+
+    <!-- JS Back to top -->
+    <script type="text/javascript">
+        var $backToTop = $(".backTop");
+        $backToTop.hide();
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() > 100) {
+                $backToTop.fadeIn();
+            } else {
+                $backToTop.fadeOut();
+            }
+        });
+
+        $backToTop.on('click', function (e) {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 500);
+        });
+    </script>
+    <!-- JS Back to top -->
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type='text/javascript' src='javascript/jquery-3.3.1.min.js'></script>
+    <script type='text/javascript' src='javascript/countdown.js'></script>
+    <link rel="shortcut icon" href="logo/favicon.ico">
+    <link rel="stylesheet" href="checkout.css">
+    <title>Checkout - Utopedia</title>
+    <script>
+        $(document).ready(function () {
+            $("#button_drop").click(function () {
+                $("#panel").slideToggle("fast");
+            });
+        });
+    </script>
+
+    <script>
+        var modal = document.getElementById('popupbox');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Bagian Navigasi -->
+    <nav>
+        <ul>
+            <a href="Utopedia.html">
+                <li><img class="logo" src="logo/logo.png"></li>
+                <li class="telu">T O P E D I A</li>
+            </a>
+        </ul>
+    </nav>
+    <br>
+    <!-- Bagian Navigasi -->
+
+    <!--Bagian popup-->
+    <div class="popup" id="popupbox">
+        <div class="popup_konten animasi">
+            <div class="footer_popup">
+                <div onclick="document.getElementById('popupbox').style.display='none'" class="tutup">+</div>
+                <h2 class="foot_teks">Pembayaran</h2>
+            </div>
+            <div class="popup_harga">
+                <h2>Rp 16.502.000</h2>
+                <h4>Detail Tagihan</h4>
+            </div>
+            <h3 class="metode">Pilih Metode Pembayaran</h3>
+            <div class="pembayaran">
+                <a href="pembayaran.html">
+                    <div class="metode_bayar">
+                        <div class="grid3">
+                            <img src="logo/bni.png">
+                        </div>
+                        <div class="grid3">
+                            <h4>Transfer Bank</h4>
+                            <p>BNI</p>
+                        </div>
+                        <div class="grid3">
+                            <h3>&#10095;</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="pembayaran.html">
+                    <div class="metode_bayar">
+                        <div class="grid3">
+                            <img src="logo/bca.png">
+                        </div>
+                        <div class="grid3">
+                            <h4>Transfer Bank</h4>
+                            <p>BCA</p>
+                        </div>
+                        <div class="grid3">
+                            <h3>&#10095;</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="pembayaran.html">
+                    <div class="metode_bayar">
+                        <div class="grid3">
+                            <img src="logo/mandiri.png">
+                        </div>
+                        <div class="grid3">
+                            <h4>Transfer Bank</h4>
+                            <p>Mandiri</p>
+                        </div>
+                        <div class="grid3">
+                            <h3>&#10095;</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="pembayaran.html">
+                    <div class="metode_bayar">
+                        <div class="grid3">
+                            <img src="logo/alfa.png">
+                        </div>
+                        <div class="grid3">
+                            <h4>Alfamart/Alfamidi</h4>
+                            <p>Maksimum Rp. 5.000.000</p>
+                        </div>
+                        <div class="grid3">
+                            <h3>&#10095;</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="pembayaran.html">
+                    <div class="metode_bayar">
+                        <div class="grid3">
+                            <img src="logo/indomaret.png">
+                        </div>
+                        <div class="grid3">
+                            <h4>Indomaret/Ceriamart</h4>
+                            <p>Maksimum Rp. 5.000.000</p>
+                        </div>
+                        <div class="grid3">
+                            <h3>&#10095;</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Bagian popup-->
+
+    <!-- Bagian Konten -->
+    <div class="body">
+        <h3 class="check">Checkout</h3>
+        <div class="konten_atas">
+            <div class="bag1">
+                <div class="body1">
+                    <h2 style="color: rgb(39, 39, 39);">Alamat Pengiriman</h2>
+                    <hr style="margin-bottom: 20px; height: 1px; background-color: rgb(194, 194, 194); border: none;">
+                    <h5 class="nama">Muhamad Azmi Rizkifar</h5>
+                    <p>085822973327</p>
+                    <p>Perum citalang indah blok B No 36 RT 20/05</p>
+                    <p>Purwakarta, Kab. Purwakarta, 41111</p>
+                    <a href="#" id="first">Ubah Alamat</a>
+                    <a href="#">Ubah Pintpoint</a>
+                    <hr style="margin: 20px 0; height: 1px; background-color: rgb(194, 194, 194); border: none;">
+                    <button class="alamat">Buat Alamat Baru</button>
+                    <button class="alamat">Pilih Alamat Lain</button>
+                </div>
+            </div>
+
+            <div class="bag2">
+                <div class="body2">
+                    <h2 style="color: rgb(39, 39, 39);">Ringkasan Belanja</h2>
+                    <hr style="margin-bottom: 20px; height: 1px; background-color: rgb(194, 194, 194); border: none;">
+                    <a href="#" class="voucher">Punya Kode Voucher?</a><br>
+                    <input type="text" class="voucher" placeholder="Masukkan Kode Voucher">
+                    <input type="submit" class="button" value="Gunakan">
+                    <div class="hitung">
+                        <div>
+                            <p>Harga Barang</p>
+                        </div>
+                        <div>
+                            <p class="harga">Rp 16.475.000</p>
+                        </div>
+                        <div>
+                            <p>Biaya Kirim</p>
+                        </div>
+                        <div>
+                            <p class="harga">Rp. 22.000</p>
+                        </div>
+                        <div>
+                            <p>Biaya Asuransi</p>
+                        </div>
+                        <div>
+                            <p class="harga">Rp. 5.000</p>
+                        </div>
+                        <hr style="margin: 10px 0; height: 2px; background-color: rgb(194, 194, 194); border: none;">
+                        <hr style="margin: 10px 0; height: 2px; background-color: rgb(194, 194, 194); border: none;">
+                        <div>
+                            <p>Total Biaya</p>
+                        </div>
+                        <div>
+                            <p class="harga">Rp. 16.502.000</p>
+                        </div>
+                    </div>
+                    <form>
+                        <input type="button" class="bayar" value="Bayar Barang" onclick="document.getElementById('popupbox').style.display='flex'">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="konten_bawah">
+            <div class="body3">
+                <h2 style="color: rgb(80, 80, 80);">Penjual : <p class="penjual">Ucell Cempaka</p>
+                </h2>
+                <img src="produk/asus.jpg">
+                <div class="barang">
+                    <div>
+                        <h3>ASUS ROG GL503GE - i7</h3>
+                        <h4>Rp. 16.475.000</h4>
+                        <div class="detil">
+                            <p class="satu">Berat : 1.7 kg</p>
+                            <p class="dua">Jumlah : 1</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Durasi Pengiriman</h3>
+                        <div id="button_drop">
+                            <button>1 hari <span id="arrow">&#9662</span></button>
+                        </div>
+                        <div id="panel">
+                            <div class="ongkir">
+                                <div>
+                                    <p class="hari">1 hari</p>
+                                    <p class="hari">2-4 hari</p>
+                                </div>
+                                <div>
+                                    <p class="harga">Rp 22.000</p>
+                                    <p class="harga">Rp 14.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="garis" style="margin: 20px 0; height: 1px; background-color: rgb(194, 194, 194); border: none;">
+                <div class="subtotal">
+                    <div class="gridsubtotal">
+                        <p class="subtotal">Subtotal</p>
+                    </div>
+                    <div class="gridsubtotal">
+                        <h4 class="subtotal">Rp 16.475.000</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <!-- Bagian Footer -->
+    <footer>
+        <div class="footbawah">
+            <h1 class="footbawah">U-Topedia</h1>
+        </div>
+    </footer>
+</body>
+
+</html>
